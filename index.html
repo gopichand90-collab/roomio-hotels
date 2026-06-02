@@ -1,70 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Roomio Hotels</title>
+<section style="padding:40px; text-align:center; background:#111; color:white;">
+  <h2>Our Rooms 🏨</h2>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-    }
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
 
-    .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb') center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
+    <div style="background:#1c1c1c; padding:20px; width:250px; border-radius:10px;">
+      <h3>Standard Room</h3>
+      <p>Comfortable stay with basic facilities</p>
+      <p>₹999 / night</p>
+    </div>
 
-    .hero h1 {
-      font-size: 55px;
-      margin: 0;
-      text-shadow: 2px 2px 10px black;
-    }
+    <div style="background:#1c1c1c; padding:20px; width:250px; border-radius:10px;">
+      <h3>Deluxe Room</h3>
+      <p>Extra comfort with AC & TV</p>
+      <p>₹1499 / night</p>
+    </div>
 
-    .hero p {
-      font-size: 20px;
-      margin-top: 10px;
-      color: #f1f1f1;
-    }
+    <div style="background:#1c1c1c; padding:20px; width:250px; border-radius:10px;">
+      <h3>Premium Suite</h3>
+      <p>Luxury stay experience</p>
+      <p>₹2499 / night</p>
+    </div>
 
-    .btn {
-      margin-top: 20px;
-      padding: 14px 28px;
-      background: gold;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: orange;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="hero">
-    <h1>Welcome to Roomio Hotels 🏨</h1>
-    <p>Luxury | Comfort | Best Price Stay</p>
-
-    <button class="btn" onclick="bookNow()">Book Now</button>
   </div>
-
-  <script>
-    function bookNow() {
-      let phone = "919876543210"; 
-      let msg = "Hi, I want to book a room in Roomio Hotels";
-      let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
-      window.open(url, "_blank");
-    }
-  </script>
-
-</body>
-</html>
+</section>
