@@ -1,85 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Roomio Hotels</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background: linear-gradient(135deg, #111, #222);
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
       text-align: center;
     }
 
-    header {
-      padding: 20px;
-      background: #000;
-      font-size: 24px;
-      font-weight: bold;
-      color: gold;
-    }
-
-    .hero {
-      padding: 60px 20px;
-    }
-
     .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 55px;
+      margin: 0;
+      text-shadow: 2px 2px 10px black;
     }
 
     .hero p {
-      color: #ccc;
+      font-size: 20px;
+      margin-top: 10px;
+      color: #f1f1f1;
     }
 
     .btn {
       margin-top: 20px;
-      padding: 12px 25px;
+      padding: 14px 28px;
       background: gold;
       border: none;
-      cursor: pointer;
-      font-weight: bold;
       border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .btn:hover {
       background: orange;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #000;
-      font-size: 14px;
-      color: #aaa;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    🏨 Roomio Hotels
-  </header>
-
   <div class="hero">
-    <h1>Welcome to Roomio V2</h1>
-    <p>Affordable | Comfortable | Premium Stay Experience</p>
+    <h1>Welcome to Roomio Hotels 🏨</h1>
+    <p>Luxury | Comfort | Best Price Stay</p>
 
-    <button class="btn" onclick="bookNow()">Book Now on WhatsApp</button>
+    <button class="btn" onclick="bookNow()">Book Now</button>
   </div>
-
-  <footer>
-    © 2026 Roomio Hotels. All Rights Reserved.
-  </footer>
 
   <script>
     function bookNow() {
-      let phone = "91XXXXXXXXXX"; // change your number here
-let message = "Hi, I want to book a room in Roomio Hotels";
-      let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+      let phone = "919876543210"; 
+      let msg = "Hi, I want to book a room in Roomio Hotels";
+      let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
       window.open(url, "_blank");
     }
   </script>
