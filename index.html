@@ -1,32 +1,16 @@
-<section style="padding:40px; text-align:center; background:#111; color:white;">
-  <h2>Book Your Stay 📩</h2>
+<section style="padding:40px; text-align:center; background:#000; color:white;">
+  <h2>Contact & Location 📍</h2>
 
-  <input id="name" placeholder="Your Name" style="padding:10px; margin:5px;"><br>
-  <input id="date" type="date" style="padding:10px; margin:5px;"><br>
+  <p>📞 Phone: +91 9876543210</p>
+  <p>📧 Email: info@roomiohotels.com</p>
 
-  <select id="room" style="padding:10px; margin:5px;">
-    <option>Standard Room</option>
-    <option>Deluxe Room</option>
-    <option>Premium Suite</option>
-  </select><br>
-
-  <button onclick="bookRoom()" style="padding:12px 25px; background:gold; border:none; margin-top:10px; font-weight:bold; cursor:pointer;">
-    Book on WhatsApp
-  </button>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
+    width="90%" height="250" style="border:0; border-radius:10px;"
+    allowfullscreen="" loading="lazy">
+  </iframe>
 </section>
 
-<script>
-function bookRoom() {
-  let name = document.getElementById("name").value;
-  let date = document.getElementById("date").value;
-  let room = document.getElementById("room").value;
-
-  let phone = "919876543210"; 
-
-  let msg = "Hi, I want to book a room.%0AName: " + name + "%0ADate: " + date + "%0ARoom: " + room;
-
-  let url = "https://wa.me/" + phone + "?text=" + msg;
-
-  window.open(url, "_blank");
-}
-</script>
+<footer style="background:#111; color:gray; text-align:center; padding:20px;">
+  © 2026 Roomio Hotels | All Rights Reserved
+</footer>
