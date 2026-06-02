@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roomio Hotels</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #111, #222);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      background: #000;
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .hero {
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #ccc;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: gold;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .btn:hover {
+      background: orange;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #000;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    🏨 Roomio Hotels
+  </header>
+
+  <div class="hero">
+    <h1>Welcome to Roomio V2</h1>
+    <p>Affordable | Comfortable | Premium Stay Experience</p>
+
+    <button class="btn" onclick="bookNow()">Book Now on WhatsApp</button>
+  </div>
+
+  <footer>
+    © 2026 Roomio Hotels. All Rights Reserved.
+  </footer>
+
+  <script>
+    function bookNow() {
+      let phone = "91XXXXXXXXXX"; // change your number here
+let message = "Hi, I want to book a room in Roomio Hotels";
+      let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
