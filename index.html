@@ -1,16 +1,163 @@
-<section style="padding:40px; text-align:center; background:#000; color:white;">
-  <h2>Contact & Location 📍</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roomio Hotels</title>
 
-  <p>📞 Phone: +91 9876543210</p>
-  <p>📧 Email: info@roomiohotels.com</p>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+}
 
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
-    width="90%" height="250" style="border:0; border-radius:10px;"
-    allowfullscreen="" loading="lazy">
-  </iframe>
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px 10px black;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* ROOMS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery img {
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* FORM */
+input, select {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+}
+
+button {
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Welcome to Roomio Hotels 🏨</h1>
+  <p>Luxury | Comfort | Best Price Stay</p>
+  <button class="btn" onclick="bookNow()">Book Now</button>
+</div>
+
+<!-- ROOMS -->
+<section>
+  <h2>Our Rooms 🛏️</h2>
+  <div class="cards">
+    <div class="card">Standard Room - ₹999</div>
+    <div class="card">Deluxe Room - ₹1499</div>
+    <div class="card">Premium Suite - ₹2499</div>
+  </div>
 </section>
 
-<footer style="background:#111; color:gray; text-align:center; padding:20px;">
-  © 2026 Roomio Hotels | All Rights Reserved
-</footer>
+<!-- GALLERY -->
+<section>
+  <h2>Gallery 📸</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210f7">
+    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4">
+    <img src="https://images.unsplash.com/photo-1551887373-6a8a3c0b0a2d">
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section>
+  <h2>Book Your Stay 📩</h2>
+
+  <input id="name" placeholder="Your Name"><br>
+  <input id="date" type="date"><br>
+
+  <select id="room">
+    <option>Standard Room</option>
+    <option>Deluxe Room</option>
+    <option>Premium Suite</option>
+  </select><br>
+
+  <button class="btn" onclick="bookRoom()">Send on WhatsApp</button>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>Contact 📍</h2>
+  <p>📞 +91 9876543210</p>
+  <p>📧 info@roomio.com</p>
+</section>
+
+<!-- JS -->
+<script>
+function bookNow() {
+  let phone = "919876543210";
+  let msg = "Hi, I want to book a room";
+  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+  window.open(url, "_blank");
+}
+
+function bookRoom() {
+  let name = document.getElementById("name").value;
+  let date = document.getElementById("date").value;
+  let room = document.getElementById("room").value;
+
+  let phone = "919876543210";
+
+  let msg = `Hi, I want to book:
+Name: ${name}
+Date: ${date}
+Room: ${room}`;
+
+  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
