@@ -78,7 +78,25 @@ input, select {
 button {
   cursor: pointer;
 }
-</style>
+.blink-offer{
+position:fixed;
+right:20px;
+bottom:100px;
+background:#ffcc00;
+color:#000;
+padding:12px 18px;
+border-radius:25px;
+font-weight:bold;
+z-index:999;
+animation:blink 1s infinite;
+box-shadow:0 0 15px rgba(255,204,0,0.8);
+}
+
+@keyframes blink{
+50%{
+opacity:0.4;
+}
+}</style>
 </head>
 
 <body>
@@ -299,6 +317,10 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 z-index:9999;">
 💬 WhatsApp
 </a>
-
+<div class="blink-offer">
+🔥 HOTEL PARTNER OFFER<br>
+First 3 Months FREE<br>
+Zero Commission
+</div>
 </body>
  </html>
