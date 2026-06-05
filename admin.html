@@ -39,7 +39,26 @@ cursor:pointer;
 
 <input id="image" type="text" placeholder="Hotel Image URL">
 
-<button onclick="alert('Hotel Added Successfully!')">Add Hotel</button>
+<button onclick="addHotel()">Add Hotel</button>
 </div>
-</body>
+<script>
+
+function addHotel(){
+
+let hotel = {
+name: document.getElementById("hotelName").value,
+location: document.getElementById("location").value,
+price: document.getElementById("price").value,
+whatsapp: document.getElementById("whatsapp").value,
+image: document.getElementById("image").value
+};
+
+localStorage.setItem("roomioHotel", JSON.stringify(hotel));
+
+alert("Hotel Saved Successfully!");
+
+}
+
+</script>
+/body>
 </html>
