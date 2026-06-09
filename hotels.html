@@ -1,73 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Roomio Hotels</title>
-<style>
-body{
-font-family:Arial;
-background:#f5f5f5;
-padding:20px;
-}
-
-.card{
-max-width:400px;
-margin:20px auto;
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-}
-
-button{
-background:#0f172a;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:6px;
-cursor:pointer;
-}
-</style>
-</head>
-<body>
-
-<h1 align="center">ROOMIO HOTELS</h1>
-
-<div class="card">
-<img id="hotelImage">
-
-<h2 id="hotelName"></h2>
-
-<p id="hotelLocation"></p>
-
-<p id="hotelPrice"></p>
-
-<button>Book Now</button>
-</div>
-
 <script>
 
-let hotel = JSON.parse(localStorage.getItem("roomioHotel"));
+let hotels = JSON.parse(localStorage.getItem("roomioHotels")) || [];
 
-if(hotel){
+let cards = "";
 
-document.getElementById("hotelImage").src = hotel.image;
+hotels.forEach(hotel => {
 
-document.getElementById("hotelName").innerText = hotel.name;
+cards += `
+<div class="card">
+<img src="${hotel.image}">
+<h2>${hotel.name}</h2>
+<p>Location : ${hotel.location}</p>
+<p>Price : ₹${hotel.price}</p>
+<button>Book Now</button>
+</div>
+`;
 
-document.getElementById("hotelLocation").innerText =
-"Location : " + hotel.location;
+});
 
-document.getElementById("hotelPrice").innerText =
-"Price : ₹" + hotel.price;
-
-}
+document.body.innerHTML =
+'<h1 align="center">ROOMIO HOTELS</h1>' + cards;
 
 </script>
-
-</body>
-</html>
